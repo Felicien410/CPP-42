@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:08:26 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/04 11:45:50 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/14 10:25:46 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AForm
 
     public:
         AForm(std::string name, int gradeRequiredToSign, int gradeRequiredToExcecute );
-        ~AForm();
+        virtual ~AForm();
         AForm(const AForm& cpy);
         AForm &operator=(const AForm& e);
         
