@@ -1,0 +1,12 @@
+Chapter IV Exercise 00: Bitcoin Exchange:
+
+Conteneur recommandé: std::map ou std::unordered_map.
+Raison: Vous devez associer des dates à des valeurs de Bitcoin. Les maps sont idéales pour stocker des paires clé-valeur, avec std::map étant optimisé pour l'ordre et std::unordered_map pour l'accès rapide.
+Chapter V Exercise 01: Reverse Polish Notation (RPN):
+
+Conteneur recommandé: std::stack.
+Raison: L'expression en notation polonaise inversée se prête bien à une implémentation avec une pile, où vous pouvez facilement ajouter et retirer des éléments au sommet de la pile lors de l'évaluation de l'expression.
+Chapter VI Exercise 02: PmergeMe:
+
+Conteneur recommandé: std::vector et un autre conteneur de votre choix.
+Raison: std::vector est un bon choix pour stocker une séquence d'entiers, en particulier pour les opérations de tri. Vous pourriez également expérimenter avec un autre conteneur (comme std::list ou std::deque) pour comparer les performances avec le Ford-Johnson algorithm (algorithme de tri par fusion-insertion).

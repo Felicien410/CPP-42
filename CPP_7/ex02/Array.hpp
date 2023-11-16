@@ -18,7 +18,7 @@ template <class T> class Array
         T operator[](unsigned int i) const;
         T&  operator[](unsigned int i);
         T getData(unsigned int i) const;
-        unsigned int size() const {return _size;};
+        unsigned int size() const;
 };
 
 template<typename T>
@@ -94,5 +94,10 @@ T& Array<T>::operator[](unsigned int i)
     return this->_array[i];
 }
 
+template<typename T>
+unsigned int Array<T>::size() const
+{
+    return this->_size;
+}
 
 #endif
