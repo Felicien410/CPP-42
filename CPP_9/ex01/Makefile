@@ -6,14 +6,13 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 09:00:00 by feliciencat       #+#    #+#              #
-#    Updated: 2023/11/16 11:41:33 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/11/16 16:26:18 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = btc
-SRC = srcs/main.cpp srcs/BitcoinExchange.cpp srcs/utils.cpp
-HDR = BitcoinExchange.hpp
-
+NAME = RPN
+SRC = main.cpp RNP.cpp
+HDR = RNP.hpp
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 GREEN = \033[0;32m
