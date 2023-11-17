@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:47:01 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/04 12:15:06 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/17 17:00:55 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ int main()
     
 
 	std::cout << std::endl;
-	return EXIT_SUCCESS;
+	return 0;
     
 }

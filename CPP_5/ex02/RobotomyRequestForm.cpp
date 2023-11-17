@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:50:09 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/17 16:58:57 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/17 16:59:51 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void RobotomyRequestForm::extra_message(Bureaucrat& b) const
 		std::cout << "RobotomyRequestForm couldn't be executed by " << b.getName() << " because it wasn't signed!" << std::endl;
 	else
 	{
-		srand(time(NULL));
+		std::srand(std::time(NULL));
 
 		std::cout << "(Loud drill noises) " << std::endl;
 
