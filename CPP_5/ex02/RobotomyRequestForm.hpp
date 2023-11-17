@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:08:26 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/17 17:01:55 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/17 17:04:24 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include"AForm.hpp"
 #include <cstdlib>
-#include <random>
 
 class RobotomyRequestForm : public AForm
 {
