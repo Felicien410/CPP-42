@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:37:15 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/04 11:44:01 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/17 16:58:18 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void ShrubberyCreationForm::extra_message(Bureaucrat& b) const
     else
     {
         std::ofstream myfile;
-        myfile.open (_target + "_shrubbery");
+        myfile.open((_target + "_shrubbery").c_str());
         myfile << "       _-_" << std::endl;
         myfile << "    /~~   ~~\\" << std::endl;
         myfile << " /~~         ~~\\" << std::endl;
