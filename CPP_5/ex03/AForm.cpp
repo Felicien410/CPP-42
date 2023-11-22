@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:43:47 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/04 11:54:38 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 08:14:51 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,3 +107,4 @@ void AForm::execute(Bureaucrat const & b) const
         extra_message(const_cast<Bureaucrat&>(b));
     }
 }
+

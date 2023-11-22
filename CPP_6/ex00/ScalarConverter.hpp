@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:34:05 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/13 11:00:29 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 11:14:08 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class ScalarConverter
     private:
         ScalarConverter();
         std::string _str;
-        long long _iVal;
+        long _iVal;
         float   _fVal;
         double  _dVal;
         char    _cVal;
@@ -57,3 +57,4 @@ int     isFloat(std::string &literal);
 int     isChar(std::string &literal);
 int     isDouble(std::string &literal);
 int handleSpecialLiterals(std::string &literal);
+

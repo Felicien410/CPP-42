@@ -6,7 +6,7 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 09:00:00 by feliciencat       #+#    #+#              #
-#    Updated: 2023/11/14 09:46:12 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/11/21 11:14:03 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ScalarConversion
 SRC = ScalarConverter.cpp main.cpp
 HDR = ScalarConverter.hpp
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 GREEN = \033[0;32m
 RED = \033[0;31m

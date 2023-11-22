@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:43:47 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/10/24 12:37:20 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 08:12:50 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,3 +90,4 @@ void Form::beSigned(Bureaucrat& b)
         _is_signed = 1;
     }
 }
+

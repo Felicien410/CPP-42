@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:33:50 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/13 11:48:19 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/22 10:12:52 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void ScalarConverter::convert() {
     for (int i = 0; i < 5; i++) {
         if (checkFunctions[i](_str)) {
             try {
-                // Convertir la chaîne en fonction du type identifié
                 switch (i) {
                     case 0: // Char
                         _cVal = _str[0];
@@ -89,7 +88,7 @@ void ScalarConverter::convert() {
                         _iVal = static_cast<int>(_fVal);
                         _cVal = static_cast<char>(_fVal);
                         break;
-                    case 4: // Special literals like "nan", "inf"
+                    case 4: // Special literals
                         handleSpecialLiterals(_str);
                         break;
                 }
@@ -103,8 +102,6 @@ void ScalarConverter::convert() {
             break;
         }
     }
-
-    // Affichage des résultats
     printConvertedValues();
 }
 
@@ -294,3 +291,4 @@ int handleSpecialLiterals(std::string &literal)
     }
     return (0);
 }
+

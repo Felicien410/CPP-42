@@ -6,31 +6,11 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:42:58 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/13 13:04:42 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/22 16:54:29 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <iostream>
-#include <string>
-
-class Base
-{
-    public:
-        virtual ~Base() {};
-};
-
-class A : public Base
-{
-};
-
-class B : public Base
-{
-};
-
-class C : public Base
-{
-};
+#include"Identify.hpp"
 
 Base * generate(void)
 {
@@ -72,13 +52,16 @@ void    identify( Base& p ) {
 }
 
 int     main( void )
-{
+{   
+    srand(time(NULL));
+    
     Base*   a = generate();
     Base*   b = generate();
     Base*   c = generate();
     Base*   d = generate();
 
     std::cout << "/* **************************************** */" << std::endl;
+    std::cout << std::endl;
 
     std::cout << "a* = "; identify( a );
     std::cout << "a& = "; identify( *a ); std::cout << std::endl;

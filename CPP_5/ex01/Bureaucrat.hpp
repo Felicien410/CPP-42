@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:08:26 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/10/24 12:33:49 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 08:12:46 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ class Bureaucrat
 
 std::ostream & operator<<( std::ostream & o, Bureaucrat & b);
 
-#endif 
+#endif
 

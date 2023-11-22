@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:47:01 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/10/24 12:52:57 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 10:41:29 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,10 @@ int main()
     try
     {
         Bureaucrat d("Dominique", 12);
-        Form Formulair4("Document cessez le feu", 13, 13 );
-        std::cout << Formulair4;
+        Form Formulair5("Document cessez le feu", 13, 13);
+        std::cout << Formulair5;
         d.signForm("salut", 0);
-        std::cout << Formulair4;
+        std::cout << Formulair5;
     }
     catch (Form::GradeTooLowException &e)
     {

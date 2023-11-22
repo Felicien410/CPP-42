@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 08:08:26 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/04 11:46:33 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/21 09:33:40 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ class PresidentialPardonForm : public AForm
         
         virtual void extra_message(Bureaucrat& b) const;
         std::string getTarget(){return _target;}
-        
-
 };
 
 #endif
