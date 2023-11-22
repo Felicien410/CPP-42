@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:33:50 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/22 10:12:52 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/22 17:02:02 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,19 +71,19 @@ void ScalarConverter::convert() {
                         _fVal = static_cast<float>(_cVal);
                         break;
                     case 1: // Int
-                        _iVal = std::stoi(_str);
+                        _iVal = stoi(_str);
                         _fVal = static_cast<float>(_iVal);
                         _dVal = static_cast<double>(_iVal);
                         _cVal = static_cast<char>(_iVal);
                         break;
                     case 2: // Double
-                        _dVal = std::stod(_str);
+                        _dVal = stod(_str);
                         _fVal = static_cast<float>(_dVal);
                         _iVal = static_cast<int>(_dVal);
                         _cVal = static_cast<char>(_dVal);
                         break;
                     case 3: // Float
-                        _fVal = std::stof(_str);
+                        _fVal = stof(_str);
                         _dVal = static_cast<double>(_fVal);
                         _iVal = static_cast<int>(_fVal);
                         _cVal = static_cast<char>(_fVal);
