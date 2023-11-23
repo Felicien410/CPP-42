@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:46:01 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/21 11:16:18 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/23 09:08:42 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
         return (1);
     }
     ScalarConverter scalarConverter(argv[1]);
-    scalarConverter.convert();
+    std::string str = scalarConverter.getStr();
+    ScalarConverter::convert(str);
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:34:05 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/21 11:14:08 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/23 09:08:27 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 #include <cfloat>
 #include <limits>
 
-// creat a static class ScalarConverter
 class ScalarConverter
 {
     public:
@@ -36,21 +35,16 @@ class ScalarConverter
         ScalarConverter(const ScalarConverter & src);
         ~ScalarConverter();
         ScalarConverter & operator=(const ScalarConverter & rhs);
-        
-        void convert();
-        void printConvertedValues();
+        static void convert(std::string& _str);
+        static void printConvertedValues(char cVal, long iVal, float fVal, double dVal);
         std::string getStr() const;
-        void setStr(std::string str);
-
+    
     private:
         ScalarConverter();
         std::string _str;
-        long _iVal;
-        float   _fVal;
-        double  _dVal;
-        char    _cVal;
+
 };
-#endif
+
 
 int     isInt(std::string &literal);
 int     isFloat(std::string &literal);
@@ -58,3 +52,4 @@ int     isChar(std::string &literal);
 int     isDouble(std::string &literal);
 int handleSpecialLiterals(std::string &literal);
 
+#endif

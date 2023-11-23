@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:33:50 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/22 17:02:02 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/23 09:08:30 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,6 @@ similaire à std::atof mais avec des fonctionnalités supplémentaires, comme st
 
 ScalarConverter::ScalarConverter(std::string str) : _str(str)
 {
-    _iVal = 0;
-    _fVal = 0.0f;
-    _dVal = 0.0;
-    _cVal = '\0';
 }
 
 ScalarConverter::ScalarConverter(const ScalarConverter & src)
@@ -56,8 +52,46 @@ ScalarConverter & ScalarConverter::operator=(const ScalarConverter & rhs)
     return (*this);
 }
 
-void ScalarConverter::convert() {
+static int ft_stoi(const std::string& str)
+{
+    int num;
+    std::stringstream ss(str);
 
+    ss >> num;
+    return num;
+}
+
+static float ft_stof(const std::string& str)
+{
+    float num;
+    std::stringstream ss(str);
+
+    ss >> num;
+    return num;
+}
+
+std::string ScalarConverter::getStr() const
+{
+    return _str;
+}
+
+
+static double ft_stod(const std::string& str)
+{
+    double num;
+    std::stringstream ss(str);
+
+    ss >> num;
+    return num;
+}
+
+void ScalarConverter::convert(std::string& _str) {
+
+    char _cVal = '\0';
+    long _iVal = 0;
+    float _fVal = 0.0f;
+    double _dVal = 0.0;
+    
     int (*checkFunctions[5])(std::string &_str) = {&isChar, &isInt, &isDouble, &isFloat, &handleSpecialLiterals};
 
     for (int i = 0; i < 5; i++) {
@@ -71,19 +105,19 @@ void ScalarConverter::convert() {
                         _fVal = static_cast<float>(_cVal);
                         break;
                     case 1: // Int
-                        _iVal = stoi(_str);
+                        _iVal = ft_stoi(_str);
                         _fVal = static_cast<float>(_iVal);
                         _dVal = static_cast<double>(_iVal);
                         _cVal = static_cast<char>(_iVal);
                         break;
                     case 2: // Double
-                        _dVal = stod(_str);
+                        _dVal = ft_stod(_str);
                         _fVal = static_cast<float>(_dVal);
                         _iVal = static_cast<int>(_dVal);
                         _cVal = static_cast<char>(_dVal);
                         break;
                     case 3: // Float
-                        _fVal = stof(_str);
+                        _fVal = ft_stof(_str);
                         _dVal = static_cast<double>(_fVal);
                         _iVal = static_cast<int>(_fVal);
                         _cVal = static_cast<char>(_fVal);
@@ -102,10 +136,10 @@ void ScalarConverter::convert() {
             break;
         }
     }
-    printConvertedValues();
+    printConvertedValues(_cVal, _iVal, _fVal, _dVal);
 }
 
-void ScalarConverter::printConvertedValues()
+void ScalarConverter::printConvertedValues(char _cVal, long _iVal, float _fVal, double _dVal)
 {
     std::cout << "char: "; 
     if ((_cVal >= 32 && _cVal <= 47) || (_cVal >= 58 && _cVal <= 126))
