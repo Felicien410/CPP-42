@@ -1,9 +1,9 @@
+#ifndef SERIALIZATION_HPP
+# define SERIALIZATION_HPP
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-
-#ifndef SERIALIZATION_HPP
-# define SERIALIZATION_HPP
 
 struct Data
 {
@@ -22,8 +22,8 @@ public:
     ~Serialization();
     Serialization & operator=(const Serialization & rhs);
 
-    uintptr_t serialize(Data* ptr);
-    Data* deserialize(uintptr_t raw);
+    static unsigned long serialize(Data* ptr);
+    static Data* deserialize(unsigned long raw);
 };
 
 #endif

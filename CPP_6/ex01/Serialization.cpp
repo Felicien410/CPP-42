@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:11:36 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/21 11:16:32 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/23 09:16:51 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,10 @@ Serialization & Serialization::operator=(const Serialization & rhs)
     return (*this);
 }
 
-uintptr_t Serialization::serialize(Data* ptr)
-{
-    uintptr_t addr = reinterpret_cast<uintptr_t>(ptr);
-    return (addr);
+unsigned long Serialization::serialize(Data* ptr) {
+    return reinterpret_cast<unsigned long>(ptr);
 }
 
-Data* Serialization::deserialize(uintptr_t raw)
-{
-    Data* pVar = reinterpret_cast<Data*>(raw);
-    return(pVar);
+Data* Serialization::deserialize(unsigned long raw) {
+    return reinterpret_cast<Data*>(raw);
 }

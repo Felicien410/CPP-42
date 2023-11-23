@@ -6,28 +6,26 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:11:05 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/21 11:16:29 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/23 09:17:01 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serialization.hpp"
+#include <iostream>
 
-int main()
-{
+int main() {
     Data *data = new Data;
-    Serialization reinterepret;
-
     data->s1 = "Felicien";
     data->n = 20;
     data->s2 = "Catteau";
 
-    std::cout << "Address: " << reinterepret.serialize( data ) << std::endl;
-    
-    std::cout << "Name: " << reinterepret.deserialize( reinterepret.serialize( data ) )->s1 << std::endl;
-    std::cout << "Age: " << reinterepret.deserialize( reinterepret.serialize( data ) )->n << std::endl;
-    std::cout << "Name: " << reinterepret.deserialize( reinterepret.serialize( data ) )->s2 << std::endl;
+    unsigned long rawPtr = Serialization::serialize(data);
+
+    std::cout << "Address: " << rawPtr << std::endl;
+    std::cout << "Name: " << Serialization::deserialize(rawPtr)->s1 << std::endl;
+    std::cout << "Age: " << Serialization::deserialize(rawPtr)->n << std::endl;
+    std::cout << "Name: " << Serialization::deserialize(rawPtr)->s2 << std::endl;
 
     delete data;
-
     return EXIT_SUCCESS;
 }
