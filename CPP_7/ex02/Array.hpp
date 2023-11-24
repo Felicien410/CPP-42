@@ -1,8 +1,8 @@
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 #include <iostream>
 #include <string>
 
-#ifndef ARRAY_HPP
-# define ARRAY_HPP
 
 template <class T> class Array
 {

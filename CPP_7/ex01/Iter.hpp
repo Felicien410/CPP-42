@@ -6,9 +6,12 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:25:31 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/14 08:51:20 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/24 10:44:57 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ITER_HPP
+#define ITER_HPP
 
 #include <iostream>
 #include <string>
@@ -22,3 +25,5 @@ void Iter(I tab[],int lenght, void (*f)(I))
     }
     return;
 }
+
+#endif

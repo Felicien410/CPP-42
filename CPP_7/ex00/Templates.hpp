@@ -6,9 +6,12 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:38:58 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/13 14:10:52 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/24 10:45:06 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef TEMPLATES_HPP
+#define TEMPLATES_HPP
 
 #include<stdlib.h>
 #include<string.h>
@@ -39,3 +42,5 @@ template <class Max> Max max(Max a, Max b)
     else
         return a;
 }
+
+#endif
