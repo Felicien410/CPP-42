@@ -6,15 +6,15 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:45:01 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/15 12:43:02 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/24 16:49:16 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stack>
-#include<iostream>
-
 #ifndef MUTANSTACK_HPP
 #define MUTANSTACK_HPP
+
+#include <stack>
+#include<iostream>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -26,8 +26,12 @@ class MutantStack : public std::stack<T>
         MutantStack & operator=(MutantStack const & rhs);
 
         typedef typename std::stack<T>::container_type::iterator iterator;
+        typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+        
         iterator begin();
         iterator end();
+        const_iterator begin() const;
+        const_iterator end() const;
         void printStack();
 };
 
@@ -62,6 +66,18 @@ typename MutantStack<T>::iterator MutantStack<T>::begin()
 
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end()
+{
+    return std::stack<T>::c.end();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
+{
+    return std::stack<T>::c.begin();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::end() const
 {
     return std::stack<T>::c.end();
 }
