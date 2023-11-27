@@ -23,7 +23,7 @@ all: $(NAME)
 
 $(NAME): $(SRC) $(HDR)
 	@echo "$(GREEN)Compiling $(NAME)..."
-	@clang++$(FLAGS) $(SRC) -o $(NAME)
+	@clang++ $(FLAGS) $(SRC) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compiled !"
 	
 clean:
