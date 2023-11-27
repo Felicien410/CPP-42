@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:27:00 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/27 16:19:11 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/27 17:03:54 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ class Span
 	    };
     private:
         Span();
-        unsigned int max_size;
+        unsigned int _N;
 		std::vector<int> storage;
 };
 

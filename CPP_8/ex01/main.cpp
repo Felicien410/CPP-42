@@ -78,7 +78,25 @@ int main(void) {
     }
 
     std::cout << std::endl;
-    
-    
+
+    //test with 1 elements
+    std::cout << "test with 1 elements: " << std::endl;
+    Span sp6 = Span(2);
+    sp6.addNumber(1);
+    try {
+        std::cout << "shortest span: " << sp6.shortestSpan() << std::endl;
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+    }
+    std::cout << std::endl;
+
+    //test with 10000 elements
+    std::cout << "test with 10000 elements: " << std::endl;
+    Span sp5 = Span(10000);
+    sp5.addRange(1, 10000);
+    std::cout << "shortest span: " << sp5.shortestSpan() << std::endl;
+    std::cout << "longest span: " << sp5.longestSpan() << std::endl;
+    std::cout << std::endl;
 
 }

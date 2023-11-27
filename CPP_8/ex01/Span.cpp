@@ -6,17 +6,17 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:28:02 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/27 16:19:23 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/27 17:07:43 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span(unsigned int n) : max_size(n)
+Span::Span(unsigned int n) : _N(n)
 {
 }
 
-Span::Span(void) : max_size(0)
+Span::Span(void) : _N(0)
 {
 }
 
@@ -33,7 +33,7 @@ Span & Span::operator=(Span const & rhs)
 {
     if (this != &rhs)
     {
-        this->max_size = rhs.max_size;
+        this->_N = rhs._N;
         this->storage = rhs.storage;
     }
     return *this;
@@ -41,7 +41,7 @@ Span & Span::operator=(Span const & rhs)
 
 void Span::verifyLimit()
 {
-    if (this->storage.size() == this->max_size)
+    if (this->storage.size() == this->_N)
         throw Span::Limit();
 }
 
@@ -54,27 +54,29 @@ void Span::verifSize()
 
 void Span::addNumber(int number)
 {
-    if(max_size == 0)
+    if(_N == 0)
         throw Span::NoSpanException();
-    if (storage.size() + 1 > this->max_size)
+    if (storage.size() + 1 > this->_N)
         throw Span::Limit();
     this->storage.push_back(number);
 }
 
 void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    if(max_size == 0)
+    if(_N == 0)
         throw Span::NoSpanException();        
-    if (this->storage.size() + std::distance(begin, end) > this->max_size)
+    if (this->storage.size() + std::distance(begin, end) > this->_N)
         throw Span::Limit();
     this->storage.insert(this->storage.end(), begin, end);
 }
 
 void Span::addRange(int start, int end)
 {
-    if(max_size == 0)
+    if (start > end)
+        std::swap(start, end);
+    if(_N == 0)
         throw Span::NoSpanException();
-    if (this->storage.size() + (end - start) > this->max_size)
+    if (this->storage.size() + (end - start) > this->_N)
         throw Span::Limit();
     for (int i = start; i <= end; i++)
         this->storage.push_back(i);
@@ -88,7 +90,7 @@ void Span::printElements()
 
 long Span::shortestSpan(void)
 {
-    if(max_size == 0)
+    if(_N == 0)
         throw Span::NoSpanException();
     verifSize();
 
@@ -105,7 +107,7 @@ long Span::shortestSpan(void)
 
 long Span::longestSpan(void)
 {
-    if(max_size == 0)
+    if(_N == 0)
         throw Span::NoSpanException();
     verifSize();
 
