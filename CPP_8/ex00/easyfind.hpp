@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:14:21 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/27 14:36:49 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/27 17:17:00 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include<iostream>
 #include<string.h>
+#include<algorithm>
 
 class EasyFindException : public std::exception {
 	public:

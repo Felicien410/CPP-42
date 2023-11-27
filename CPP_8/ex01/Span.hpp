@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:27:00 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/27 17:03:54 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/27 17:15:04 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include<iostream>
 #include<string.h>
 #include<algorithm>
+#include<vector>
 
 class Span
 {
