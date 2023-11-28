@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:34:47 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/17 15:57:23 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 17:53:48 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class RNP
         int verifNumbers(std::string args);
         void addStack();
         int VerifNumberOperand();
-
 
     private:
         std::stack<int> stockage;

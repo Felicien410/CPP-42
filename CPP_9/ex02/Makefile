@@ -6,14 +6,14 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 09:00:00 by feliciencat       #+#    #+#              #
-#    Updated: 2023/11/25 21:05:04 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/11/28 14:15:07 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = PmergeMe
 SRC = main.cpp PmergeMe.cpp
 HDR = PmergeMe.hpp
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 GREEN = \033[0;32m
 RED = \033[0;31m
@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME): $(SRC) $(HDR)
 	@echo "$(GREEN)Compiling $(NAME)..."
-	@clang++ $(FLAGS) $(SRC) -o $(NAME)
+	@c++ $(FLAGS) $(SRC) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compiled !"
 	
 clean:

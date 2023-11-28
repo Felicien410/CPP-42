@@ -6,7 +6,7 @@
 #    By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 09:00:00 by feliciencat       #+#    #+#              #
-#    Updated: 2023/11/25 21:04:56 by feliciencat      ###   ########.fr        #
+#    Updated: 2023/11/28 14:15:02 by feliciencat      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME): $(SRC) $(HDR)
 	@echo "$(GREEN)Compiling $(NAME)..."
-	@clang++ $(FLAGS) $(SRC) -o $(NAME)
+	@c++ $(FLAGS) $(SRC) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compiled !"
 	
 clean:

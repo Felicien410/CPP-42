@@ -29,6 +29,5 @@ int main(int argc, char **argv) {
     v.printAndSort("vector");
     l.printAndSort("deque");
 
-
     return 0;
 }
