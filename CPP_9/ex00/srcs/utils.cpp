@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:38:21 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/16 13:28:01 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:46:41 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ std::string* mySplit(const std::string &str, const std::string &sep) {
 }
 
 void loadExchangeRatesFromFile(BitcoinExchange& exchange, const std::string& filename) {
-    std::ifstream file(filename);
+    std::ifstream file(filename.c_str());
     if (!file.is_open()) {
         std::cerr << "Unable to open file " << filename << "\n";
         return;
@@ -59,7 +59,7 @@ void loadExchangeRatesFromFile(BitcoinExchange& exchange, const std::string& fil
         valueRate.erase(valueRate.find_last_not_of(' ') + 1);
 
         try {
-            float rate = std::stof(valueRate);
+            float rate = ft_stof(valueRate);
             exchange.addCurrency(arr[0], rate);
         } catch (const std::invalid_argument& e) {
             std::cerr << "Erreur de conversion pour la valeur: " << valueRate << "\n";

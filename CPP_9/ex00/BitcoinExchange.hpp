@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:18:55 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/28 12:43:53 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:46:18 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class BitcoinExchange
 size_t countTokens(const std::string &str, const std::string &sep);
 std::string* mySplit(const std::string &str, const std::string &sep);
 void loadExchangeRatesFromFile(BitcoinExchange& exchange, const std::string& filename);
+float ft_stof(const std::string& str);
 
 #endif
 
