@@ -71,6 +71,7 @@ int PmergeMe<Container>::recognizeAndAddNumbers(std::string argv) {
         {
             if (*it == n)
             {
+                //std::cout << "Doublon" << std::endl;
                 return(1);
             }
         }
@@ -120,7 +121,7 @@ void PmergeMe<Container>::putMinInNewContainer() {
             it = _sequence.erase(it);
         } else {
             _minSequence.push_back(*it_next);
-            it = _sequence.erase(std::next(it));
+            it = _sequence.erase(it_next);
         }
     }
 }
