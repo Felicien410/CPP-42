@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:18:30 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/16 13:30:47 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:39:43 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ float verifNumbers(std::string & str)
     return amount;
 }
 void processInputFile(BitcoinExchange& exchange, const std::string& filename) {
-    std::ifstream inputFile(filename);
+    std::ifstream inputFile(filename.c_str());;
     if (!inputFile.is_open()) {
         std::cerr << "Unable to open input file " << filename << "\n";
         return;

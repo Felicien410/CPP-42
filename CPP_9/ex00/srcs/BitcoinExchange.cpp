@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:20:35 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/16 12:42:20 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:38:49 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void BitcoinExchange::addCurrency(std::string const & name, double rate)
 }
 
 bool BitcoinExchange::exists(const std::string& date) const {
-    // std::cout << "date => " << date << std::endl;
-    // std::cout << "_currencies.find(date) => " << _currencies.find(date)->first << std::endl;
     return _currencies.find(date) != _currencies.end();
 }
 
@@ -66,14 +64,32 @@ void BitcoinExchange::printMap()
     }
 }
 
+int BitcoinExchange::ft_stoi(const std::string& str)
+{
+    int num;
+    std::stringstream ss(str);
+
+    ss >> num;
+    return num;
+}
+
+float BitcoinExchange::ft_stof(const std::string& str)
+{
+    float num;
+    std::stringstream ss(str);
+
+    ss >> num;
+    return num;
+}
+
 std::string BitcoinExchange::previousDate(const std::string& date)
 {
     std::string year = date.substr(0, 4);
     std::string month = date.substr(5, 2);
     std::string day = date.substr(8, 2);
-    int yearInt = std::stoi(year);
-    int monthInt = std::stoi(month);
-    int dayInt = std::stoi(day);
+    int yearInt = ft_stoi(year);
+    int monthInt = ft_stoi(month);
+    int dayInt = ft_stoi(day);
     if (dayInt == 1)
     {
         if (monthInt == 1)
