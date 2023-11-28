@@ -104,11 +104,9 @@ void PmergeMe<Container>::sortPairs() {
     }
 }
 
-// Mettre le minimum dans un nouveau conteneur
 template<typename Container>
 void PmergeMe<Container>::putMinInNewContainer() {
     for (typename Container::iterator it = _sequence.begin(); it != _sequence.end();) {
-        //creat it_next
         typename Container::iterator it_next = it;
         it_next++;
         if (it_next == _sequence.end()) {
@@ -126,7 +124,6 @@ void PmergeMe<Container>::putMinInNewContainer() {
     }
 }
 
-// Afficher la séquence minimale
 template<typename Container>
 void PmergeMe<Container>::printMinSequence() {
     for (typename Container::const_iterator it = _minSequence.begin(); it != _minSequence.end(); ++it) {
@@ -135,7 +132,6 @@ void PmergeMe<Container>::printMinSequence() {
     std::cout << std::endl;
 }
 
-// Tri par fusion-insertion
 template<typename Container>
 void PmergeMe<Container>::mergeInsertSort() {
     std::sort(_minSequence.begin(), _minSequence.end());
@@ -154,11 +150,11 @@ void PmergeMe<Container>::printAndSort(std::string type_name) {
     std::clock_t start = std::clock();
 
     sortPairs();
-    putMinInNewContainer(); // Assurez-vous que cette méthode est correctement nommée
+    putMinInNewContainer();
     mergeInsertSort();
 
     std::clock_t end = std::clock();
-    double elapsed_time = double(end - start) / CLOCKS_PER_SEC * 1000000; // Temps en microsecondes
+    double elapsed_time = double(end - start) / CLOCKS_PER_SEC * 1000000; 
 
     std::cout << "After:\t";
     printSequence();
