@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:20:35 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/28 12:38:49 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:42:40 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void BitcoinExchange::printMap()
     }
 }
 
-int BitcoinExchange::ft_stoi(const std::string& str)
+int ft_stoi(const std::string& str)
 {
     int num;
     std::stringstream ss(str);
@@ -73,13 +73,23 @@ int BitcoinExchange::ft_stoi(const std::string& str)
     return num;
 }
 
-float BitcoinExchange::ft_stof(const std::string& str)
+float ft_stof(const std::string& str)
 {
     float num;
     std::stringstream ss(str);
 
     ss >> num;
     return num;
+}
+
+std::string ft_to_string(int num)
+{
+    std::string str;
+    std::stringstream ss;
+
+    ss << num;
+    ss >> str;
+    return str;
 }
 
 std::string BitcoinExchange::previousDate(const std::string& date)
@@ -119,9 +129,9 @@ std::string BitcoinExchange::previousDate(const std::string& date)
     }
     else
         dayInt--;
-    std::string yearStr = std::to_string(yearInt);
-    std::string monthStr = std::to_string(monthInt);
-    std::string dayStr = std::to_string(dayInt);
+    std::string yearStr = ft_to_string(yearInt);
+    std::string monthStr = ft_to_string(monthInt);
+    std::string dayStr = ft_to_string(dayInt);
     if (monthStr.length() == 1)
         monthStr = "0" + monthStr;
     if (dayStr.length() == 1)

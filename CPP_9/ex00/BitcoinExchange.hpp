@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:18:55 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/28 12:37:20 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:43:53 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ class BitcoinExchange
         void printMap();
         std::string previousDate(const std::string& date);
         bool isLeapYear(int year);
-        static int ft_stoi(const std::string& str);
-        static float ft_stof(const std::string& str);
         void printCurrencies();
         void printCurrency(std::string const & name);
         void printAllCurrencies();

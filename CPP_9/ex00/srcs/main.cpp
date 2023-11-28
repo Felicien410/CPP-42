@@ -6,11 +6,20 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:18:30 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/28 12:39:43 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/28 12:44:25 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../BitcoinExchange.hpp"
+
+float ft_stof2(const std::string& str)
+{
+    float num;
+    std::stringstream ss(str);
+
+    ss >> num;
+    return num;
+}
 
 float verifNumbers(std::string & str)
 {
@@ -35,7 +44,7 @@ float verifNumbers(std::string & str)
     }
     try
     {
-            amount = std::stof(str);
+            amount = ft_stof2(str);
     } 
     catch (const std::invalid_argument& e)
     {
