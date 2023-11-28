@@ -5,7 +5,6 @@ int main(int argc, char **argv) {
         std::cout << "Usage: ./a.out [numbers]" << std::endl;
         return -1;
     }
-
     PmergeMe<std::vector<int> > v; 
     PmergeMe<std::deque<int> > l;
 
@@ -13,7 +12,7 @@ int main(int argc, char **argv) {
         std::vector<std::string> numbers = split(argv[i], ' ');
         for (std::vector<std::string>::const_iterator it = numbers.begin(); it != numbers.end(); ++it) {
             if (v.recognizeAndAddNumbers(*it) == -1) {
-                std::cout << "Invalid input: " << "'" << *it << "'" << std::endl;
+                std::cout << "Error" << std::endl;
                 return -1;
             }
         }
@@ -22,7 +21,7 @@ int main(int argc, char **argv) {
         std::vector<std::string> numbers = split(argv[i], ' ');
         for (std::vector<std::string>::const_iterator it = numbers.begin(); it != numbers.end(); ++it) {
             if (l.recognizeAndAddNumbers(*it) == -1) {
-                std::cout << "Invalid input: " << "'" << *it << "'" << std::endl;
+                std::cout << "Error" << std::endl;
                 return -1;
             }
         }

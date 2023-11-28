@@ -62,7 +62,7 @@ int PmergeMe<Container>::recognizeAndAddNumbers(std::string argv) {
             return -1;
         }
     }
-    long int n = std::stol(argv);
+    long int n = strtol(argv.c_str(), NULL, 10);
     if (n > INT_MAX || n < INT_MIN)
         return -1;
     else
@@ -71,7 +71,6 @@ int PmergeMe<Container>::recognizeAndAddNumbers(std::string argv) {
         {
             if (*it == n)
             {
-                //std::cout << "Doublon" << std::endl;
                 return(1);
             }
         }
@@ -108,17 +107,19 @@ void PmergeMe<Container>::sortPairs() {
 template<typename Container>
 void PmergeMe<Container>::putMinInNewContainer() {
     for (typename Container::iterator it = _sequence.begin(); it != _sequence.end();) {
-        if (std::next(it) == _sequence.end()) {
+        //creat it_next
+        typename Container::iterator it_next = it;
+        it_next++;
+        if (it_next == _sequence.end()) {
             _minSequence.push_back(*it);
             it = _sequence.erase(it);
             continue;
         }
-
-        if (*it < *std::next(it)) {
+        if (*it < *it_next) {
             _minSequence.push_back(*it);
             it = _sequence.erase(it);
         } else {
-            _minSequence.push_back(*std::next(it));
+            _minSequence.push_back(*it_next);
             it = _sequence.erase(std::next(it));
         }
     }
