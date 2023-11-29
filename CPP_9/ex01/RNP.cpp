@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:01:59 by feliciencat       #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:30 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/11/29 18:33:42 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int RNP::VerifNumberOperand()
     return(0);
 }
 
+
 void RNP::addStack()
 {
     for (unsigned int i = 0 ; i < _argv.size() ; i++)
@@ -88,6 +89,11 @@ void RNP::addStack()
         }
         else if (_argv[i] == '+' || _argv[i] == '-' || _argv[i] == '*' || _argv[i] == '/')
         {
+            if (stockage.size() < 2) 
+            {
+                std::cout << "Error: Not enough numbers for the operation" << std::endl;
+                return;
+            }
             int b = stockage.top();
             stockage.pop();
             int a = stockage.top();
@@ -110,8 +116,8 @@ void RNP::addStack()
         }
         else
         {
-            std::cout << "Error" << std::endl;
-            return ;
+            std::cout << "Error: Invalid character" << std::endl;
+            return;
         }
     }
     std::cout << stockage.top() << std::endl;
